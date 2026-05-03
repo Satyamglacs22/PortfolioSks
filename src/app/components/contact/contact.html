@@ -1,0 +1,70 @@
+<section id="contact" class="contact-section reveal">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    
+    <div class="contact-container">
+      <div class="contact-info glass-panel">
+        <h3>Contact Information</h3>
+        <p class="contact-desc">
+          Feel free to reach out to me for any exciting projects, collaborations, or just to say hello.
+        </p>
+        
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:sk72574401@gmail.com">sk72574401@gmail.com</a>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <h4>Phone</h4>
+            <p>+91 9123195281 / +91 9319132489</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h4>Location</h4>
+            <p>Begusarai, Bihar, India</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form-wrapper glass-panel">
+        <form class="contact-form" (submit)="sendEmail($event)">
+          <div class="input-group">
+            <input type="text" id="name" name="from_name" required placeholder=" ">
+            <label for="name">Your Name</label>
+          </div>
+          
+          <div class="input-group">
+            <input type="email" id="email" name="reply_to" required placeholder=" ">
+            <label for="email">Your Email</label>
+          </div>
+          
+          <div class="input-group">
+            <textarea id="message" name="message" required rows="5" placeholder=" "></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          
+          <button type="submit" [disabled]="isSending()" class="btn btn-primary submit-btn">
+            <span *ngIf="!isSending()">Send Message <i class="fas fa-paper-plane"></i></span>
+            <span *ngIf="isSending()">Sending... <i class="fas fa-spinner fa-spin"></i></span>
+          </button>
+
+          <!-- Status Messages -->
+          <div class="form-status" *ngIf="isSuccess()">
+            <p class="success-msg"><i class="fas fa-check-circle"></i> Message sent successfully!</p>
+          </div>
+          <div class="form-status" *ngIf="isError()">
+            <p class="error-msg"><i class="fas fa-exclamation-circle"></i> Failed to send. Please try again.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

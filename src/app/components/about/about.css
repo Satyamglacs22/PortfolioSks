@@ -1,0 +1,116 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 24px;
+}
+
+.about-item {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-cyan);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.intro-box {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.intro-box h3 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.intro-box p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+.intro-box strong {
+  color: var(--accent-cyan);
+}
+
+.stats-box {
+  grid-column: span 2;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.exp-box {
+  grid-column: span 1;
+  text-align: center;
+}
+
+.exp-box .icon {
+  font-size: 2.5rem;
+  color: var(--accent-purple);
+  margin-bottom: 15px;
+}
+
+.exp-box h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.exp-box p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.stack-box {
+  grid-column: span 1;
+  align-items: center;
+}
+
+.stack-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  font-size: 2rem;
+  color: var(--text-secondary);
+}
+
+.stack-icons i:hover {
+  color: var(--accent-cyan);
+  transform: scale(1.2);
+  transition: var(--transition-smooth);
+}
+
+@media (max-width: 1024px) {
+  .about-grid { grid-template-columns: repeat(2, 1fr); }
+  .intro-box, .stats-box { grid-column: span 2; }
+}
+
+@media (max-width: 600px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-item, .intro-box, .stats-box, .exp-box, .stack-box { grid-column: span 1; grid-row: auto; }
+}
