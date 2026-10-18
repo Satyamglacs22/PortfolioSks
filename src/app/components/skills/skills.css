@@ -47,6 +47,9 @@
   color: var(--accent-cyan);
   border: 1px solid var(--glass-border);
   transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
 }
 
 .skills-tags span:hover {

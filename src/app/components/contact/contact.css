@@ -39,6 +39,7 @@
 
 .info-item p, .info-item a {
   color: var(--text-secondary);
+  text-decoration: none;
 }
 
 .info-item a:hover {
