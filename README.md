@@ -1,4 +1,4 @@
-# Satyam Kumar — Software Engineer & Generative AI Developer
+# Satyam Kumar — GenAI & Backend Engineer
 
 <div align="center">
 
